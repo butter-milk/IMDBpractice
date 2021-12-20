@@ -5,12 +5,13 @@ data = scrape.main(100)
 db = open("PracticeDB.sql","w", encoding='utf-8')
 def makeTables():
     for key in data.keys():
-        db.write("\nCREATE TABLE " + key + "(\nid INTEGER PRIMARYKEY(), \nauthor TEXT NOT NULL, \nquote TEXT \n);")
+        db.write("CREATE TABLE " + key + "(id INTEGER PRIMARY KEY, author TEXT NOT NULL, quote TEXT ); \n")
     print("TABLES HAVE BEEN MADE SUCCESSFULLY")
 def makeEntries():
     for key in data.keys():
         for entry in data[key]:
-            db.write("\nINSERT INTO " + key + " VALUES ("+str(entry[0])+" , \""+entry[1]+"\" , \""+entry[2]+"\" ); ")
+            db.write("INSERT INTO " + key + " VALUES ("+str(entry[0])+" , \""+entry[1]+"\" , \""+entry[2]+"\" ); \n")
+    db.close()
     print("ENTRIES HAVE BEEN ADDED SUCCESSFULLY")
 def main():
     makeTables()
