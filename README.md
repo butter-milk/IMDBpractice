@@ -26,4 +26,4 @@ To use the sql file in sqlite3.
   If you see the table names, you can start practicing.
   
   ## HAVE FUN :) 
-  From your TA, Kevin <3
+  From your TA, Kevin
