@@ -46,6 +46,9 @@ what humans think is impossible.", "That one bee")
 14. Give all quotes mentioning money?
 15. Give all authors who wrote a quote mentioning books?
 16. Give the three authors who have the least amount of quotes?
+17. Give all quotes mentioning 'book' but not 'read'?
+18. add a constraint to any of the tables, such that we do not allow identifiers of less than 0 and greater than 10^6?
+
 
 
 
