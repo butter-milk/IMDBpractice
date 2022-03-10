@@ -29,7 +29,7 @@ def scrape(page):
             if t not in data.keys():
                 data[t] = []
             data[t].append(  (primaryKey, author,text)  )
-        primaryKey+=1
+            primaryKey+=1
 def main(pages):
     for i in range(1,pages):
         scrape(i)

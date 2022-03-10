@@ -8,7 +8,7 @@ print("Site scraped successfully")
 db = open("PracticeDB.sql","w", encoding='utf-8')
 def makeTables():
     db.write("CREATE TABLE QUOTES (id INTEGER PRIMARY KEY, author TEXT NOT NULL, cat TEXT NOT NULL, quote TEXT); \n")
-    db.write("CREATE TABLE RATING (id FOREIGN KEY references QUOTES, rating INTEGER)")
+    db.write("CREATE TABLE RATING (id INTEGER, rating INTEGER,FOREIGN KEY(id) REFERENCES QUOTES(id) ON DELETE CASCADE);\n")
     print("TABLES HAVE BEEN MADE SUCCESSFULLY")
 def makeEntries():
     for key in data.keys():
