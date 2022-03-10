@@ -21,9 +21,10 @@ def scrape(page):
     for quote in quotes:
         tags = quote.findAll("a", {"class":"tag"})
         text = re.search(r'\“(.*?)\”',str(quote.findAll("span", {"class":"text"})[0])).group(1)
+        text.replace("\"","\'")
         author = regex.search(str(quote.findAll("small", {"class":"author"})[0])).group(1)
         for tag in tags:
-            t = regex.search(str(tag)).group(1).replace('-','').replace('read','READZ').replace('value','VALUEZ')
+            t = regex.search(str(tag)).group(1).replace('-','').replace('read','READZ').replace('value','VALUEZ').replace("\"","\'")
 
             if t not in data.keys():
                 data[t] = []
