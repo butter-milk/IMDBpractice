@@ -12,7 +12,7 @@ This can be done by:
 python3 main.py
 ```
 
-##Using the .sql file 
+## Using the .sql file 
 To use the sql file in sqlite3. 
 1. Open sqlite
 2. Enter the command:
